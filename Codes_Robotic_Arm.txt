@@ -1,0 +1,101 @@
+#include <Servo.h>
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+
+
+void setup() {
+  // put your setup code here, to run once:
+servo1.attach(11);
+servo2.attach(10);
+servo3.attach(9);
+servo4.attach(6);
+
+
+servo1.write(120);
+servo2.write(60);
+servo3.write(0);
+servo4.write(90);
+delay(2000);
+
+for(int s2pos=90; s2pos>=0; s2pos-=1){
+    servo2.write(s2pos);
+    delay(10);
+}
+
+delay(500);
+for(int s1pos=90; s1pos>=5; s1pos-=1){
+    servo1.write(s1pos);
+    delay(10);
+}
+
+delay(2000);
+for(int s1pos=0; s1pos<=120; s1pos+=1){
+    servo1.write(s1pos);
+    delay(10);
+}
+
+delay(500);
+for(int s2pos=0; s2pos<=155; s2pos+=1){
+    servo2.write(s2pos);
+    delay(10);
+}
+
+delay(500);
+for(int s1pos=90; s1pos>=50; s1pos-=1){
+    servo1.write(s1pos);
+    delay(10);
+}
+
+
+delay(500);
+for(int s4pos=90; s4pos<=180; s4pos+=1){
+    servo4.write(s4pos);
+    delay(10);
+}
+
+delay(500);
+for(int s1pos=70; s1pos<=120; s1pos+=1){
+    servo1.write(s1pos);
+    delay(10);
+}
+
+delay(500);
+for(int s2pos=170; s2pos<=180; s2pos+=1){
+    servo2.write(s2pos);
+    delay(10);
+}
+
+delay(500);
+for(int s3pos=0; s3pos<=180; s3pos+=1){
+  servo3.write(s3pos);
+  delay(10);
+}
+
+delay(500);
+for(int s1pos=120; s1pos>=53; s1pos-=1){
+    servo1.write(s1pos);
+    delay(10);
+}
+
+
+
+delay(2000);
+for(int s4pos=180; s4pos>=80; s4pos-=1){
+    servo4.write(s4pos);
+    delay(10);
+}
+
+delay(500);
+for(int s1pos=60; s1pos<=120; s1pos+=1){
+    servo1.write(s1pos);
+    delay(10);
+}
+
+}
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
